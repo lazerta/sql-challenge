@@ -8,7 +8,8 @@
 1. List the following details of each employee: employee number, last name, first name, gender, and salary.
 
 ```postgresql
-SELECT employees.emp_no, employees.last_name, employees.first_name, employees.gender, salaries.salary FROM employees JOIN salaries ON employees.emp_no = salaries.emp_no;
+SELECT employees.emp_no, employees.last_name, employees.first_name, employees.gender, salaries.salary FROM employees
+ JOIN salaries  USING(emp_no);
 ```
 2. List employees who were hired in 1986.
 ```postgresql
@@ -41,5 +42,5 @@ SELECT dept_emp.emp_no, employees.last_name, employees.first_name, departments.d
 8. In descending order, list the frequency count of employee last names, i.e., how many employees share each last name.
 ```postgresql
 
-SELECT last_name, COUNT(last_name) AS "frequency" FROM employees GROUP BY last_name ORDER BY COUNT(last_name) DESC;
+SELECT last_name, COUNT(last_name) AS frequency FROM employees GROUP BY last_name ORDER BY COUNT(last_name) DESC;
 ```
