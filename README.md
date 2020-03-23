@@ -1,7 +1,7 @@
 # sql-challenge
 
 ## ER Diagram 
-[ER Diagram](/img/ER.png)
+![ER Diagram](/img/ER.png)
 
 ## Queries
 
